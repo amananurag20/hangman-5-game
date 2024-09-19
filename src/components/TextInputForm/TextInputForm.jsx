@@ -18,6 +18,7 @@ const TextInputForm = () => {
   };
 
   const handleSubmit = (event) => {
+    console.log("submitting")
     event.preventDefault();
   };
 
@@ -47,9 +48,11 @@ const TextInputForm = () => {
       </div>
 
       <div>
-        <Button styleType={"warning"} onClickHandler={handleInputType}>
+        <Button styleType={"warning"} onClickHandler={handleInputType} type={"button"}>
           {inputType==="password"? "Show":"Hide"}
         </Button>
+
+        <Button styleType={"primary"}>Submit</Button>
       </div>
     </form>
   );
